@@ -4,7 +4,7 @@ MAINTAINER leo.lou@gov.bc.ca
 LABEL name="Mattermost" \
       vendor="Mattermost" \
       version="Team" \
-      release="5.37.2" \
+      release="5.37.3" \
       url="https://mattermost.com/" \
       summary="Mattermost Team Edition" \
       description="A free-to-use, open source, self-hosted alternative to proprietary SaaS messaging. Team Edition is your open source “virtual office”, offering all the core productivity benefits of competing SaaS solutions. It deploys as a single Linux binary with MySQL or PostgreSQL under an MIT license."          
@@ -13,7 +13,7 @@ ENV PATH="/mattermost/bin:${PATH}"
 
 ARG PUID=1001
 ARG PGID=1001
-ARG MM_PACKAGE="https://releases.mattermost.com/5.37.2/mattermost-5.37.2-linux-amd64.tar.gz?src=docker"
+ARG MM_PACKAGE="https://releases.mattermost.com/5.37.3/mattermost-5.37.3-linux-amd64.tar.gz?src=docker"
 
 RUN printf "[main]\ngpgcheck=1\ninstallonly_limit=3\nclean_requirements_on_remove=true" > /etc/dnf/dnf.conf && \
     microdnf install --nodocs gzip hostname libyaml shadow-utils tar && \
